@@ -32,7 +32,6 @@ def getResponse(question: str) -> str:
     loader = PyPDFDirectoryLoader("./docs/")
     base_docs = loader.load()
 
-    # embeddings_model = HuggingFaceEmbeddings(model_name="BAAI/bge-base-en-v1.5")
     embeddings_model = OpenAIEmbeddings()
 
     text_splitter = RecursiveCharacterTextSplitter(
@@ -58,7 +57,6 @@ def getResponse(question: str) -> str:
     os.environ["LANGCHAIN_TRACING_V2"] = "true"
     os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
     os.environ["LANGCHAIN_PROJECT"] = "Chatbot"
-
 
     # Define parameters for retrival
     retriever=vectorstore.as_retriever(search_type="similarity_score_threshold", search_kwargs={"score_threshold": .5, "k": 5})

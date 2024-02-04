@@ -150,3 +150,8 @@ Upon successful execution, you will observe two things:
 {'context_precision': 1.0000, 'faithfulness': 1.0000, 'answer_relevancy': 0.9942, 'context_recall': 0.9667}
 ```
 These metrics provide valuable insights into how well your chatbot's language model is performing based on the evaluation dataset.
+
+## Helpful references
+- [Telebot Documentation](https://pypi.org/project/pyTelegramBotAPI/)
+- [LangChain Documentation](https://python.langchain.com/docs/get_started/introduction)
+- [Ragas Documentation](https://python.langchain.com/docs/get_started/introduction](https://docs.ragas.io/en/stable/)https://docs.ragas.io/en/stable/)

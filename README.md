@@ -11,7 +11,7 @@ As part of your project, you are required to implement a chatbot using Langchain
 On your preferred IDE, open the folder that you wish you put the project in, and proceed to run the following in your shell:
 
 ```
-git clone https://github.com/clementwjl/AIH-Chatbot.git
+git clone https://github.com/clementwjl/AIH-Chatbot
 ```
 
 And afterwhich,

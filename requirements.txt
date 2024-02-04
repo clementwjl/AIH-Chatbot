@@ -1,0 +1,12 @@
+telebot
+openai
+langchain
+python-dotenv
+pypdf
+chromadb
+tiktoken
+tabulate
+ragas
+tqdm
+datasets
+pandas

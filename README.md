@@ -1,8 +1,9 @@
 # AIH-Chatbot
 Telegram Chat Bot boilerplate code for AIH, with a script to evaluate the RAG pipeline using Ragas.
 
-As part of your project, you are required to implement a chatbot using Langchain. However, implementing a whole new web application may be too tedious and out-of-scope, so we have provided code to implement your code to a telegram bot instead!
+As part of your project, you are required to implement a chatbot using Langchain. However, implementing a whole new web application may be too tedious and out-of-scope, so we have provided code to implement your code to a telegram bot instead.
 
+## Part 1: Setting up your Telegram Bot
 ## What to do: 
 
 ### 1. Clone to your repository
@@ -10,7 +11,7 @@ As part of your project, you are required to implement a chatbot using Langchain
 On your preferred IDE, open the folder that you wish you put the project in, and proceed to run the following in your shell:
 
 ```
-git clone https://github.com/zhengfeng-toh/AIHTeleBot
+git clone https://github.com/zhengfeng-toh/AIHTeleBot](https://github.com/clementwjl/AIH-Chatbot.git)
 ```
 
 And afterwhich,
@@ -53,6 +54,12 @@ Mac: Run the following on your terminal (zsh)
 pip3 install -r requirements.txt
 ```
 
+### 6. Loading your source documents
+Before running the evaluation script, make sure to create a folder named 'docs' in the same repository. Deposit PDF source documents into this folder. A sample test document has been provided in the repository for initial testing.
+
+Once done, your folder should look like this:
+
+
 ### 5. How to make your code run with the bot
 
 There are two Python files that will be running the show, `bot.py` and `model.py`.
@@ -93,6 +100,47 @@ My terminal says
                   ~~~~~~^^^
 IndexError: list index out of range
 ```
-
 A: Create a folder called docs, add all your relevant documents inside. 
+
+## Part 2: How to evaluate your RAG pipeline with Ragas
+
+As part of the Langchain framework, the _evaluator.py_ script helps with assessing the performance of your chatbot's RAG pipeline. This script leverages the RAGAS framework for evaluations, providing insights into various metrics such as context precision, faithfulness, answer relevancy, and context recall.
+
+## How it works
+How it Works
+### 1. Load Source Documents
+Before running the evaluation script, make sure to create a folder named docs in the same repository. Deposit PDF source documents into this folder. A sample test document has been provided in the repository for initial testing.
+
+### 2. Create Vector Store
+The script starts by creating a vector store with embeddings using the source documents stored in the docs folder.
+
+### 3. Generate Evaluation Dataset
+The script utilizes the source documents and the LLM defined to generate a small dataset. This dataset includes questions, contexts, and ground truth answers, forming the basis for evaluating the model's performance later on.
+
+### 4. Generate Answers
+Using the dataset, the script generates answers using the specified LLM. The resulting dataset now contains the original fields (questions, contexts, ground truth answers) along with the additional field of the generated answers by the LLM.
+
+### 5. Apply RAGAS Framework
+The script employs the RAGAS framework and package to evaluate how the model responses performed against the initial ground truths. The evaluation metrics include context precision, faithfulness, answer relevancy, and context recall.
+
+### Running the Script
+Execute the following command in your terminal to run the evaluator.py script:
+
+Windows: Run the following on your terminal (Command Prompt)
+```
+python evaluator.py
+```
+
+Mac: Run the following on your terminal (zsh)
+```
+python3 evaluator.py
+```
+
+Upon successful execution, the script will produce a terminal print statement containing evaluation metrics. An example output may look like the following:
+
+```
+{'context_precision': 1.0000, 'faithfulness': 1.0000, 'answer_relevancy': 0.9942, 'context_recall': 0.9667}
+```
+These metrics provide valuable insights into how well your chatbot's language model is performing based on the evaluation dataset.
+
 

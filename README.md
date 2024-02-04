@@ -126,6 +126,8 @@ Using the dataset, the script generates answers using the specified LLM. The res
 The script employs the RAGAS framework and package to evaluate how the model responses performed against the initial ground truths. The evaluation metrics include context precision, faithfulness, answer relevancy, and context recall.
 
 ### Running the Script
+_***Note that the execution of this script might take awhile. **_
+
 Execute the following command in your terminal to run the evaluator.py script:
 
 Windows: Run the following on your terminal (Command Prompt)

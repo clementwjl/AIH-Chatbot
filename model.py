@@ -31,7 +31,6 @@ def getResponse(question: str) -> str:
 
     loader = PyPDFDirectoryLoader("./docs/")
     base_docs = loader.load()
-    print(len(base_docs))
 
     # embeddings_model = HuggingFaceEmbeddings(model_name="BAAI/bge-base-en-v1.5")
     embeddings_model = OpenAIEmbeddings()

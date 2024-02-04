@@ -99,10 +99,6 @@ messages = prompt_template.format_messages(
 response = question_generation_model(messages)
 output_dict = question_output_parser.parse(response.content)
 
-for k, v in output_dict.items():
-    print(k)
-    print(v)
-
 qac_triples = []
 
 for text in tqdm(texts[:5]):
@@ -155,10 +151,6 @@ messages = prompt_template.format_messages(
 
 response = primary_ground_truth_llm(messages)
 output_dict = answer_output_parser.parse(response.content)
-
-for k, v in output_dict.items():
-    print(k)
-    print(v)
 
 for triple in tqdm(qac_triples):
     messages = prompt_template.format_messages(

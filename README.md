@@ -92,6 +92,8 @@ Successfully loaded! Starting bot...
 
 Head to your Telegram bot and give it a test. 
 
+![Screenshot 2024-02-05 at 1 07 19 AM](https://github.com/clementwjl/AIH-Chatbot/assets/108287396/3fb62536-8e4f-41f2-aea6-723f9d8c7cb7)
+
 
 ## Error debugging
 

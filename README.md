@@ -11,7 +11,7 @@ As part of your project, you are required to implement a chatbot using Langchain
 On your preferred IDE, open the folder that you wish you put the project in, and proceed to run the following in your shell:
 
 ```
-git clone https://github.com/zhengfeng-toh/AIHTeleBot](https://github.com/clementwjl/AIH-Chatbot.git)
+https://github.com/clementwjl/AIH-Chatbot.git
 ```
 
 And afterwhich,
@@ -54,13 +54,15 @@ Mac: Run the following on your terminal (zsh)
 pip3 install -r requirements.txt
 ```
 
-### 6. Loading your source documents
+### 5. Loading your source documents
 Before running the evaluation script, make sure to create a folder named 'docs' in the same repository. Deposit PDF source documents into this folder. A sample test document has been provided in the repository for initial testing.
 
 Once done, your folder should look like this:
 
+![Screenshot 2024-02-05 at 12 57 31 AM](https://github.com/clementwjl/AIH-Chatbot/assets/108287396/89c38110-07c6-45f6-9c51-92ce7bbefad0)
 
-### 5. How to make your code run with the bot
+
+### 6. How to make your code run with the bot
 
 There are two Python files that will be running the show, `bot.py` and `model.py`.
 
@@ -70,7 +72,7 @@ There are two Python files that will be running the show, `bot.py` and `model.py
 
 You may use helper functions or even change `bot.py` to suit your project requirements. Ultimately, it is up to your group to decide how the chatbot should behave. 
 
-## 6. Test the bot
+## 7. Test the bot
 
 Windows: Run the following on your terminal (Command Prompt)
 ```
@@ -136,11 +138,11 @@ Mac: Run the following on your terminal (zsh)
 python3 evaluator.py
 ```
 
-Upon successful execution, the script will produce a terminal print statement containing evaluation metrics. An example output may look like the following:
+Upon successful execution, you will observe two things:
+#### 1. Your folder will be populated with 2 new CSVs, titled _groundtruth_eval_dataset.csv_ and _basic_qa_ragas_dataset.csv_ respectively.
+#### 2. the script will produce a terminal print statement containing evaluation metrics. An example output may look like the following:
 
 ```
 {'context_precision': 1.0000, 'faithfulness': 1.0000, 'answer_relevancy': 0.9942, 'context_recall': 0.9667}
 ```
 These metrics provide valuable insights into how well your chatbot's language model is performing based on the evaluation dataset.
-
-
